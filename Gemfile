@@ -37,7 +37,7 @@ gem 'high_voltage'
 gem 'simple_form'
 gem 'zurb-foundation'
 group :development do
-gem 'better_errors' 
-gem 'quiet_assets' 
+gem 'better_errors'
+gem 'quiet_assets'
 gem 'rails_layout'
 end
