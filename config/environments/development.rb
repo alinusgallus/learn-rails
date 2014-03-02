@@ -26,13 +26,24 @@ LearnRails::Application.configure do
   # This option may cause significant delays in view rendering with a large
   # number of complex assets.
   config.assets.debug = true
-
-  #copy/paste from learn-rails for email configuration
+  
   config.action_mailer.smtp_settings = {
-  :address   => "smtp.mandrillapp.com",
-  :port      => 25,
-  :user_name => ENV["MANDRILL_USERNAME"],
-  :password  => ENV["MANDRILL_API_KEY"]
+   address: "smtp.gmail.com",
+   port: 587,
+   domain: ENV["LearnRails"], 
+   authentication: "plain", 
+   enable_starttls_auto: true, 
+   user_name: ENV["GMAIL_USERNAME"], 
+   password: ENV["GMAIL_PASSWORD"]
 }
+  #copy/paste from learn-rails for email configuration
+  #config.action_mailer.smtp_settings = {
+  #:address   => "smtp.mandrillapp.com",
+  #:port      => 25,
+  #:user_name => ENV["MANDRILL_USERNAME"],
+  #:password  => ENV["MANDRILL_API_KEY"]
+#}
+
+config.action_mailer.perform_deliveries = true
 
 end
